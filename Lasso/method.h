@@ -1,11 +1,5 @@
 #pragma once
-class Method {
-public:
-	Data* data;
-	virtual Status solve();
-	Solution* solution;
-};
-
+#include <iostream>
 class Data {
 public:
 	int n;
@@ -21,4 +15,11 @@ class Solution {
 	double* sol;
 	double value, time;
 	Status status;
+};
+
+class Method {
+public:
+	Data* data;
+	virtual Status solve();
+	Solution* solution;
 };
