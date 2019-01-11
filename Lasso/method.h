@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-class Data {
+class Data
+{
 public:
 	int n;
 	double* A, b;
@@ -8,16 +9,18 @@ public:
 
 enum Status
 {
-	ERROR, SOLVED, UNBOUNDED
+	ERROR = 0, SOLVED = 1, UNBOUNDED = 2
 };
 
-class Solution {
+class Solution
+{
 	double* sol;
 	double value, time;
 	Status status;
 };
 
-class Method {
+class Method
+{
 public:
 	Data* data;
 	virtual Status solve();
